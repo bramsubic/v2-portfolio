@@ -47,7 +47,7 @@ const App = () => {
         <div className='row-container'>
             <div className="" key={index}>
             <div className="title pb-3 text-uppercase">{item.title}</div>
-            <div className="'main-content">
+            <div className="">
               {item.list ? (
                 <ul className="p-0">
                   {item.list.map((link, idx) => (
