@@ -1,12 +1,24 @@
+@font-face {
+  font-family: "Theinhardt-Regular";   
+  src: local("Theinhardt-Regular"),
+    url("./Theinhardt-Regular.otf") format("opentype");
+}
+
+.theinhardt {
+  font-family: "Theinhardt-Regular";
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
-  font-size: 12.5px;
+  font-size: 13px;
 }
 
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: #2b4b3b;
+  background-color: #000000;
 }
 
 ul {
@@ -36,4 +48,11 @@ h1, h2 {
   bottom: 0;
   left: 0;
   color: #b3d6d4;
+}
+
+@media (max-width: 700px) {
+  .main-container {
+    flex-direction: column;
+    height: 100%;
+  }
 }
