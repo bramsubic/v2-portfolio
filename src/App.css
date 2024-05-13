@@ -56,3 +56,10 @@ h1, h2 {
     height: 100%;
   }
 }
+
+.slick-slider {
+  width: 240px;  
+  transform: none !important;
+  transition: transform 900ms ease 0s;
+
+}
