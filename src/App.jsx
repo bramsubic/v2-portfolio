@@ -57,9 +57,9 @@ const App = () => {
             )}
           </div>
           {item.title === '' && (
-            <div style={{ width: '200px', height: '130px', display: 'flex', flexWrap: 'wrap' }}>
+            <div style={{ width: '240px', height: '140px', display: 'flex', flexWrap: 'wrap' }}>
               {item.list.map((image, idx) => (
-                <img key={idx} src={image.url} alt={`Image ${idx}`} style={{ width: '200px', height: '130px' }} />
+                <img key={idx} src={image.url} alt={`Image ${idx}`} style={{ width: '240px', height: '140px' }} />
               ))}
             </div>
           )}
