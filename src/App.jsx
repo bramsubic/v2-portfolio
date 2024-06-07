@@ -24,7 +24,7 @@ const previews = [
     date: "2024",
     industry: "Hospitality",
     description:
-      "Innovative fashion-forward web design with a core focus on simplicity and elegance.",
+      "Website development for Ode Toronto: A black-owned, family-operated boutique hotel on Dundas St West. In Collaboration with Design of Brand.",
   },
   {
     img: "./assets/clearpath.png",
@@ -34,61 +34,7 @@ const previews = [
     date: "2024",
     industry: "Wellness",
     description:
-      "Exploring the intersection of minimalism and future fashion trends in web design.",
-  },
-  {
-    img: "./assets/main-4.jpg",
-    code: "03",
-    title: "The Third Place",
-    date: "2024",
-    industry: "Travel",
-    description:
-      "Digital-first fashion branding that merges cutting-edge UI/UX principles with style.",
-  },
-  {
-    img: "./assets/main-5.jpg",
-    code: "04",
-    title: "Toronto Restauarnts",
-    date: "2024",
-    industry: "Food",
-    description:
-      "Tech-infused fashion experiences showcased through interactive web design elements.",
-  },
-  {
-    img: "./assets/main-6.jpg",
-    code: "05",
-    title: "Hotel Blog",
-    date: "2024",
-    industry: "Hospitality",
-    description:
-      "Futuristic wearables and gear presented in a sleek, graphically rich web interface.",
-  },
-  {
-    img: "./assets/main-7.jpg",
-    code: "06",
-    title: "Photo Gallergy",
-    date: "2024",
-    industry: "Art",
-    description:
-      "Web presentation of innovative textiles that redefine the boundaries of modern fashion.",
-  },
-  {
-    img: "./assets/main-8.jpg",
-    code: "07",
-    title: "MindSpace",
-    date: "2024",
-    industry: "Wellness",
-    description:
-      "Augmented reality in fashion design, creating immersive web experiences for users.",
-  },
-  {
-    img: "./assets/main-9.jpg",
-    code: "08",
-    title: "CFR",
-    date: "2024",
-    industry: "Design",
-    description:
-      "Virtual fashion collections displayed through stunning graphic design and web aesthetics.",
+      "Website development for ClearPath ADHD: A healthcare company providing adult ADHD treatment with personalized plans.",
   },
   {
     img: "./assets/rhw.png",
@@ -97,8 +43,62 @@ const previews = [
     date: "2024",
     industry: "Design",
     description:
-      "Sustainable fashion meets modern web aesthetics, highlighting eco-friendly apparel innovations.",
+      "Website development for Shop RHW: A Toronto-based studio specializing in custom woodwork & functional objects.",
   },
+  {
+    img: "./assets/carols.png",
+    code: "08",
+    title: "CFR",
+    date: "2024",
+    industry: "Design",
+    description:
+      "Website Development for CFR: An Interior Design Studio that offers stylish and practical solutions to enhance the appeal and functionality of your rental property.",
+  },
+  {
+    img: "./assets/Thirdplace.png",
+    code: "03",
+    title: "The Third Place",
+    date: "2024",
+    industry: "Travel",
+    description:
+      "COMING SOON",
+  },
+  {
+    img: "./assets/TorontoResto.png",
+    code: "04",
+    title: "Toronto Restaurants",
+    date: "2024",
+    industry: "Food",
+    description:
+      "COMING SOON",
+  },
+  {
+    img: "./assets/HotelBlog.png",
+    code: "05",
+    title: "Hotel Blog",
+    date: "2024",
+    industry: "Hospitality",
+    description:
+      "COMING SOON",
+  },
+  {
+    img: "./assets/PhotoGallery.png",
+    code: "06",
+    title: "Photo Gallergy",
+    date: "2024",
+    industry: "Art",
+    description:
+      "COMING SOON",
+  },
+  {
+    img: "./assets/Mindspace.png",
+    code: "07",
+    title: "MindSpace",
+    date: "2024",
+    industry: "Wellness",
+    description:
+      "COMING SOON",
+  }
 ];
 
 const defaultClipPaths = {
@@ -297,9 +297,9 @@ const App = () => {
           style={{ display: previewVisible ? "block" : "none" }}
         >
           <button className="close-btn" onClick={handleClosePreview}>
-            X
+            x
           </button>
-          <div className="preview-img">
+          <div className="preview-img blur-img">
             <img src={preview.img} alt={preview.title} />
           </div>
           <div className="preview-title">
