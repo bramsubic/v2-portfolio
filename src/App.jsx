@@ -9,10 +9,6 @@ const mapClasses = [
   "variant-1",
   "variant-1",
   "variant-1",
-  "variant-1",
-  "variant-1",
-  "variant-1",
-  "variant-1",
 ];
 
 const previews = [
@@ -24,7 +20,7 @@ const previews = [
     date: "2024",
     industry: "Hospitality",
     description:
-      "Website development for Ode Toronto: A black-owned, family-operated boutique hotel on Dundas St West. In Collaboration with Design of Brand.",
+      "Website development in collaboration with Design of Brand.",
   },
   {
     img: "./assets/clearpath.png",
@@ -34,30 +30,33 @@ const previews = [
     date: "2024",
     industry: "Wellness",
     description:
-      "Website development for ClearPath ADHD: A healthcare company providing adult ADHD treatment with personalized plans.",
+      "Design and Development",
   },
   {
     img: "./assets/rhw.png",
-    code: "09",
+    code: "03",
     title: "Shop RHW",
+    site: "https://www.shoprhw.com/",
     date: "2024",
     industry: "Design",
     description:
-      "Website development for Shop RHW: A Toronto-based studio specializing in custom woodwork & functional objects.",
+      "Design and Development",
   },
   {
     img: "./assets/carols.png",
-    code: "08",
+    code: "04",
     title: "CFR",
+    site: "https://www.carolsfurnishedrentals.com/",
     date: "2024",
     industry: "Design",
     description:
-      "Website Development for CFR: An Interior Design Studio that offers stylish and practical solutions to enhance the appeal and functionality of your rental property.",
+      "Design and Development",
   },
   {
     img: "./assets/Thirdplace.png",
-    code: "03",
+    code: "05",
     title: "The Third Place",
+    site: "/",
     date: "2024",
     industry: "Travel",
     description:
@@ -65,46 +64,18 @@ const previews = [
   },
   {
     img: "./assets/TorontoResto.png",
-    code: "04",
+    code: "06",
     title: "Toronto Restaurants",
+    site: "https://www.shoprhw.com/",
     date: "2024",
     industry: "Food",
     description:
       "COMING SOON",
   },
-  {
-    img: "./assets/HotelBlog.png",
-    code: "05",
-    title: "Hotel Blog",
-    date: "2024",
-    industry: "Hospitality",
-    description:
-      "COMING SOON",
-  },
-  {
-    img: "./assets/PhotoGallery.png",
-    code: "06",
-    title: "Photo Gallergy",
-    date: "2024",
-    industry: "Art",
-    description:
-      "COMING SOON",
-  },
-  {
-    img: "./assets/Mindspace.png",
-    code: "07",
-    title: "MindSpace",
-    date: "2024",
-    industry: "Wellness",
-    description:
-      "COMING SOON",
-  }
 ];
 
 const defaultClipPaths = {
   "variant-1": "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-  "variant-2": "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
-  "variant-3": "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
 };
 
 const variantTransforms = {
@@ -112,14 +83,7 @@ const variantTransforms = {
     title: { opacity: 0 },
     date: { opacity: 0 },
     description: { opacity: 0 },
-  },
-  "variant-2": {
-    title: { x: -75, opacity: 0 },
-    description: { y: 75, opacity: 0 },
-  },
-  "variant-3": {
-    title: { x: 75, opacity: 0 },
-    description: { x: 75, opacity: 0 },
+    site: { opacity: 0 },
   },
 };
 
@@ -178,7 +142,7 @@ const App = () => {
     gsap.to(newActivePreview, { opacity: 1, duration: 0.1 });
     setActivePreview(newActivePreview);
 
-    const elementsToAnimate = ["title", "description"];
+    const elementsToAnimate = ["title", "description", "site"];
     elementsToAnimate.forEach((el) => {
       const element = newActivePreview.querySelector(`.preview-${el}`);
       if (element) {
@@ -203,12 +167,12 @@ const App = () => {
     return "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)";
   };
 
-  const handleClosePreview = () => {
-    setPreviewVisible(false);
-    if (activePreview) {
-      gsap.to(activePreview, { opacity: 0, duration: 0.5 });
-    }
-  };
+  // const handleClosePreview = () => {
+  //   setPreviewVisible(false);
+  //   if (activePreview) {
+  //     gsap.to(activePreview, { opacity: 0, duration: 0.5 });
+  //   }
+  // };
 
   const handleMouseLeave = () => {
     setPreviewVisible(true);
@@ -296,10 +260,11 @@ const App = () => {
           ref={(el) => (previewRefs.current[index] = el)}
           style={{ display: previewVisible ? "block" : "none" }}
         >
-          <button className="close-btn" onClick={handleClosePreview}>
+          {/* <button className="close-btn" onClick={handleClosePreview}>
             x
-          </button>
-          <div className="preview-img blur-img">
+          </button> */}
+
+          <div className="preview-img">
             <img src={preview.img} alt={preview.title} />
           </div>
           <div className="preview-title">
@@ -308,7 +273,10 @@ const App = () => {
           <div className="preview-description">
             <p>{preview.description}</p>
           </div>
-        </div>
+          <div className="preview-site">
+            <a href={preview.site} target="_blank" rel="noopener noreferrer">Site</a>
+          </div>
+          </div>
       ))}
     </div>
   );
