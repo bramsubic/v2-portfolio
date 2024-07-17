@@ -8,7 +8,7 @@ const previews = [
     code: '01',
     site: 'https://www.odetoronto.ca/',
     title: 'Ode Toronto',
-    date: '2024',
+    date: '2019',
     industry: 'Hospitality',
     description: 'Website Development',
   },
@@ -116,12 +116,12 @@ const App = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="container">
-              <img
+              {/* <img
                 src="./assets/R1-04473-0035.JPG"
                 alt="Background"
                 className="background-img"
               />
-              <div className="blur-overlay"></div>
+              <div className="blur-overlay"></div> */}
               <div className="main-content">
                 <div className="nav">
                   <div>
@@ -153,7 +153,7 @@ const App = () => {
                           Linkedin
                         </a>
                       </li>
-                      <li>
+                      {/* <li>
                         <a
                           href="https://www.instagram.com/brittneynikkita/"
                           target="_blank"
@@ -161,7 +161,7 @@ const App = () => {
                         >
                           Instagram
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -182,9 +182,9 @@ const App = () => {
                         <div className="category industry">
                           <p>{preview.industry}</p>
                         </div>
-                        <div className="category date">
+                        {/* <div className="category date">
                           <p>{preview.date}</p>
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>

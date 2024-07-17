@@ -180,12 +180,12 @@ const App = () => {
 
   return (
     <div className="container" ref={containerRef}>
-      <img
+      {/* <img
         src="./assets/R1-04473-0035.JPG"
         alt="Background"
         className="background-img"
-      />
-      <div className="blur-overlay"></div>
+      /> */}
+      {/* <div className="blur-overlay"></div> */}
       <div className="main-content">
   <div className="nav">
     <div>
