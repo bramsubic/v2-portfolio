@@ -3,60 +3,51 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 
 const previews = [
-  {
-    img: './assets/ode.png',
-    code: '01',
-    site: 'https://www.odetoronto.ca/',
-    title: 'Ode Toronto',
-    date: '2019',
-    industry: 'Hospitality',
-    description: 'Website Development',
-  },
-  {
-    img: './assets/clearpath.png',
-    code: '02',
-    title: 'ClearPath',
-    site: 'https://www.clearpathadhd.com/',
-    date: '2024',
-    industry: 'Wellness',
-    description: 'Design and Development',
-  },
-  {
-    img: './assets/rhw.png',
-    code: '03',
-    title: 'Shop RHW',
-    site: 'https://www.shoprhw.com/',
-    date: '2024',
-    industry: 'Design',
-    description: 'Design and Development',
-  },
-  {
-    img: './assets/carols.png',
-    code: '04',
-    title: 'CFR',
-    site: 'https://www.carolsfurnishedrentals.com/',
-    date: '2024',
-    industry: 'Design',
-    description: 'Design and Development',
-  },
-  {
-    img: './assets/Thirdplace.png',
-    code: '05',
-    title: 'The Third Place',
-    site: '/',
-    date: '2024',
-    industry: 'Travel',
-    description: 'COMING SOON',
-  },
-  {
-    img: './assets/TorontoResto.png',
-    code: '06',
-    title: 'Toronto Restaurants',
-    site: 'https://www.shoprhw.com/',
-    date: '2024',
-    industry: 'Food',
-    description: 'COMING SOON',
-  },
+  // {
+  //   img: './assets/ode.png',
+  //   code: '01',
+  //   site: 'https://www.odetoronto.ca/',
+  //   title: 'Ode Toronto',
+  //   date: '2019',
+  //   industry: 'Hospitality',
+  //   description: 'Website Development',
+  // },
+  // {
+  //   img: './assets/clearpath.png',
+  //   code: '02',
+  //   title: 'ClearPath',
+  //   site: 'https://www.clearpathadhd.com/',
+  //   date: '2024',
+  //   industry: 'Wellness',
+  //   description: 'Design and Development',
+  // },
+  // {
+  //   img: './assets/carols.png',
+  //   code: '04',
+  //   title: 'CFR',
+  //   site: 'https://www.carolsfurnishedrentals.com/',
+  //   date: '2024',
+  //   industry: 'Design',
+  //   description: 'Design and Development',
+  // },
+  // {
+  //   img: './assets/Thirdplace.png',
+  //   code: '05',
+  //   title: 'The Third Place',
+  //   site: '/',
+  //   date: '2024',
+  //   industry: 'Travel',
+  //   description: 'COMING SOON',
+  // },
+  // {
+  //   img: './assets/TorontoResto.png',
+  //   code: '06',
+  //   title: 'Toronto Restaurants',
+  //   site: 'https://www.shoprhw.com/',
+  //   date: '2024',
+  //   industry: 'Food',
+  //   description: 'COMING SOON',
+  // },
 ];
 
 const CountUpLoader = ({ onComplete }) => {
@@ -122,16 +113,30 @@ const App = () => {
                 className="background-img"
               />
               <div className="blur-overlay"></div> */}
-              <div className="main-content">
+              <div className="main-content"> 
                 <div className="nav">
                   <div>
-                    <h1 className="">Brittney Ramsubick</h1>
+                    <h1>Brittney Ramsubick</h1>
                   </div>
                   <div>
-                    <h2>Frontend Developer</h2>
+                    <h2>Software Developer</h2>
                   </div>
                   <div className="contact">
                     <ul>
+                      <li>
+                        <a href="/Brittney_Ramsubick_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">Resume</a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/in/brittneyramsubick/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Linkedin
+                        </a>
+                      </li>
                       <li>
                         <a href="mailto:bramsubic@gmail.com">Email</a>
                       </li>
@@ -142,15 +147,6 @@ const App = () => {
                           rel="noopener noreferrer"
                         >
                           Github
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.linkedin.com/in/brittneyramsubick/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Linkedin
                         </a>
                       </li>
                       {/* <li>
@@ -165,7 +161,7 @@ const App = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="catalog-container">
+                {/* <div className="catalog-container">
                   <div className="items">
                     {previews.map((preview, index) => (
                       <div
@@ -182,13 +178,13 @@ const App = () => {
                         <div className="category industry">
                           <p>{preview.industry}</p>
                         </div>
-                        {/* <div className="category date">
+                        <div className="category date">
                           <p>{preview.date}</p>
-                        </div> */}
+                        </div>
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
                 {selectedItem && (
                              <motion.div
